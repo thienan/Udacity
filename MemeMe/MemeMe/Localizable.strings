@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  MemeMe
+
+  Created by Ryan Harri on 2016-08-10.
+  Copyright © 2016 Ryan Harri. All rights reserved.
+*/
+
+/* TOP */
+"TOP" = "TOP";
+
+/* BOTTOM */
+"BOTTOM" = "BOTTOM";
+
+/* Photo Library Access */
+"Photo Library Access" = "Photo Library Access";
+
+/* Photo Library Access Message */
+"MemeMe allows you to create memes with photos from your library. To allow this, go to your settings." = "MemeMe allows you to create memes with photos from your library. To allow this, go to your settings.";
+
+/* Cancel */
+"Cancel" = "Cancel";
+
+/* Settings */
+"Settings" = "Settings";
+
+/* Camera Access */
+"Camera Access" = "Camera Access";
+
+/* Camera Access Message */
+"MemeMe allows you to create memes with photos taken from your camera. To allow this, go to your settings." = "MemeMe allows you to create memes with photos taken from your camera. To allow this, go to your settings.";
+
+/* Are you sure? */
+"Are you sure?" = "Are you sure?";
+
+/* Cancel Meme Message */
+"Your current meme will be discarded. This action cannot be undone" = "Your current meme will be discarded. This action cannot be undone";
+
+/* I'm Sure */
+"I'm Sure" = "I'm Sure";
