@@ -179,7 +179,12 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         case .Denied:
             alertForPhotoLibraryAccess()
         case .NotDetermined:
-            alertForPhotoLibraryAccess()
+            PHPhotoLibrary.requestAuthorization {
+                status in
+                if status == PHAuthorizationStatus.Denied {
+                    self.alertForPhotoLibraryAccess()
+                }
+            }
         default:
             break
         }
