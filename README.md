@@ -4,7 +4,7 @@ Portfolio apps from my iOS Developer Nanodegree - [Udacity](https://www.udacity.
 # PitchPerfect
 An app that records a message and plays the audio back through user-selected filters.
 
-![PitchPerfect screenshot](https://cloud.githubusercontent.com/assets/19153741/17641003/22b1a476-60dc-11e6-9ea5-36b01575aa08.png “PitchPerfect screenshot")
+![PitchPerfect screenshot](https://cloud.githubusercontent.com/assets/19153741/17641011/73a6078c-60dc-11e6-931a-ba9234f8e836.png “PitchPerfect screenshot")
 
 # MemeMe
 Take a photo, and overlay text to meme-ify your friends. Then share on your favourite social channels!
