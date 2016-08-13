@@ -179,6 +179,9 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         case .Denied:
             alertForPhotoLibraryAccess()
         case .NotDetermined:
+            
+            /* SmokersCough (2014) Presenting camera permission dialog in iOS 8
+             Available at: http://stackoverflow.com/a/26002463 (Accessed: 12 Aug 2016) */
             PHPhotoLibrary.requestAuthorization {
                 status in
                 if status == PHAuthorizationStatus.Denied {
