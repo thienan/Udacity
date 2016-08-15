@@ -59,12 +59,6 @@ class HomeViewController: UIViewController, Alertable {
             textField.text = NSLocalizedString(text, comment: text)
             textField.autocapitalizationType = memeText.autocapitalizationType
             textField.delegate = self
-            
-//            bottomTextField.defaultTextAttributes = memeTextAttributes
-//            bottomTextField.textAlignment = memeText.textAlignment
-//            bottomTextField.text = NSLocalizedString("BOTTOM", comment: "BOTTOM")
-//            bottomTextField.autocapitalizationType = memeText.autocapitalizationType
-//            bottomTextField.delegate = self
         }
     }
     
