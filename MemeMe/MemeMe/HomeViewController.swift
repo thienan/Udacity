@@ -111,8 +111,14 @@ class HomeViewController: UIViewController, Alertable {
         configureUI(whenStateIs: MemeMeUIState.GenerateMemeBegin)
         
         // Render view to an image
-        UIGraphicsBeginImageContext(view.frame.size)
-        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
+//        UIGraphicsBeginImageContext(view.frame.size)
+//        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
+//        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+        UIGraphicsBeginImageContext(imagePickerView.frame.size)
+        imagePickerView.addSubview(topTextField)
+        imagePickerView.addSubview(bottomTextField)
+        imagePickerView.drawViewHierarchyInRect(imagePickerView.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -245,7 +251,7 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imagePickerView.image = selectedImage
-            imagePickerView.contentMode = .ScaleAspectFill
+            imagePickerView.contentMode = .ScaleAspectFit
             imagePickerView.setNeedsDisplay()
             
             configureUI(whenStateIs: MemeMeUIState.ImageSelected)
