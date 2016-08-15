@@ -164,10 +164,7 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         switch photoLibraryAuthorizationStatus {
         case .Authorized:
             if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
-                let imagePickerController = UIImagePickerController()
-                imagePickerController.delegate = self
-                imagePickerController.sourceType = .PhotoLibrary
-                presentViewController(imagePickerController, animated: true, completion: nil)
+                launchImagePickerViewController(withSourceType: .PhotoLibrary)
             }
         case .Denied:
             alertForPhotoLibraryAccess()
@@ -212,10 +209,7 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         let avAuthorizationStatus = AVCaptureDevice.authorizationStatusForMediaType(AVMediaTypeVideo)
         switch avAuthorizationStatus {
         case .Authorized:
-            let imagePickerController = UIImagePickerController()
-            imagePickerController.delegate = self
-            imagePickerController.sourceType = .Camera
-            presentViewController(imagePickerController, animated: true, completion: nil)
+            launchImagePickerViewController(withSourceType: .Camera)
         case .Denied:
             alertForCameraAccess()
         case .NotDetermined:
@@ -223,6 +217,13 @@ extension HomeViewController: UIImagePickerControllerDelegate, UINavigationContr
         default:
             break
         }
+    }
+    
+    func launchImagePickerViewController(withSourceType sourceType: UIImagePickerControllerSourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = sourceType
+        presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
     /* DogCoffee (2016) Presenting camera permission dialog in iOS 8
