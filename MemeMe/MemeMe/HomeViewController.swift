@@ -104,7 +104,9 @@ class HomeViewController: UIViewController, Alertable {
         let activityViewController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {
             activityType, completed, returnedItems, activityError in
-            self.save(memedImage)
+            if completed {
+                self.save(memedImage)
+            }
         }
         presentViewController(activityViewController, animated: true, completion: nil)
     }
