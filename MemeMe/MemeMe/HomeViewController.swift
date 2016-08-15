@@ -110,11 +110,7 @@ class HomeViewController: UIViewController, Alertable {
     func generateMemedImage() -> UIImage {
         configureUI(whenStateIs: MemeMeUIState.GenerateMemeBegin)
         
-        // Render view to an image
-//        UIGraphicsBeginImageContext(view.frame.size)
-//        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
-//        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
+        // Render image picker view to an image
         UIGraphicsBeginImageContext(imagePickerView.frame.size)
         imagePickerView.addSubview(topTextField)
         imagePickerView.addSubview(bottomTextField)
