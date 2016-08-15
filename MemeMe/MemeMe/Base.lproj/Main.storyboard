@@ -58,6 +58,10 @@
                                                     <action selector="changeFont:" destination="BYZ-38-t0r" id="OmD-TK-pHT"/>
                                                 </connections>
                                             </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Oi9-gw-mss"/>
+                                            <barButtonItem image="Crop" id="FTs-wR-jQ1">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </barButtonItem>
                                         </items>
                                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </toolbar>
@@ -278,6 +282,7 @@
     <resources>
         <image name="Album" width="33" height="33"/>
         <image name="Camera" width="30" height="30"/>
+        <image name="Crop" width="33" height="33"/>
         <image name="Font" width="33" height="33"/>
         <image name="Share" width="44" height="44"/>
         <image name="Trash" width="44" height="44"/>
