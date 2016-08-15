@@ -31,7 +31,8 @@ class HomeViewController: UIViewController, Alertable {
         super.viewDidLoad()
         
         memeText = MemeText()
-        configureTextFields()
+        configureTextFields(topTextField, text: "TOP")
+        configureTextFields(bottomTextField, text: "BOTTOM")
         configureUI(whenStateIs: MemeMeUIState.Start)
     }
     
@@ -51,19 +52,19 @@ class HomeViewController: UIViewController, Alertable {
         super.didReceiveMemoryWarning()
     }
     
-    private func configureTextFields() {
+    private func configureTextFields(textField: UITextField, text: String) {
         if let memeText = memeText, memeTextAttributes = memeText.textAttributes {
-            topTextField.defaultTextAttributes = memeTextAttributes
-            topTextField.textAlignment = memeText.textAlignment
-            topTextField.text = NSLocalizedString("TOP", comment: "TOP")
-            topTextField.autocapitalizationType = memeText.autocapitalizationType
-            topTextField.delegate = self
+            textField.defaultTextAttributes = memeTextAttributes
+            textField.textAlignment = memeText.textAlignment
+            textField.text = NSLocalizedString(text, comment: text)
+            textField.autocapitalizationType = memeText.autocapitalizationType
+            textField.delegate = self
             
-            bottomTextField.defaultTextAttributes = memeTextAttributes
-            bottomTextField.textAlignment = memeText.textAlignment
-            bottomTextField.text = NSLocalizedString("BOTTOM", comment: "BOTTOM")
-            bottomTextField.autocapitalizationType = memeText.autocapitalizationType
-            bottomTextField.delegate = self
+//            bottomTextField.defaultTextAttributes = memeTextAttributes
+//            bottomTextField.textAlignment = memeText.textAlignment
+//            bottomTextField.text = NSLocalizedString("BOTTOM", comment: "BOTTOM")
+//            bottomTextField.autocapitalizationType = memeText.autocapitalizationType
+//            bottomTextField.delegate = self
         }
     }
     
