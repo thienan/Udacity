@@ -47,10 +47,6 @@ class HomeViewController: UIViewController, Alertable {
         super.viewWillDisappear(animated)
         unsubscribeFromKeyboardNotifications()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     private func configureTextFields(textField: UITextField, text: String) {
         if let memeText = memeText, memeTextAttributes = memeText.textAttributes {
