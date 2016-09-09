@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -75,6 +75,12 @@
                                             <action selector="trashButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="55x-iq-vLd"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pf-Mv-KgQ">
+                                        <rect key="frame" x="524" y="8" width="48" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Tc6-Qx-dYz" firstAttribute="leading" secondItem="DHA-cl-Qgy" secondAttribute="leading" constant="8" id="0EN-4n-Tet"/>
@@ -120,7 +126,9 @@
                                     <constraint firstItem="ewl-6G-GxU" firstAttribute="leading" secondItem="DHA-cl-Qgy" secondAttribute="leading" id="dDs-q3-SQM"/>
                                     <constraint firstItem="ewl-6G-GxU" firstAttribute="leading" secondItem="Xaw-vS-WYj" secondAttribute="leading" id="dTU-qW-WIm"/>
                                     <constraint firstItem="pbb-ke-KBg" firstAttribute="top" secondItem="DHA-cl-Qgy" secondAttribute="top" constant="219" id="elo-Yu-gXr"/>
+                                    <constraint firstItem="5Pf-Mv-KgQ" firstAttribute="centerX" secondItem="2K1-8K-wPv" secondAttribute="centerX" id="fdr-k5-1iH"/>
                                     <constraint firstItem="czo-T6-3Br" firstAttribute="trailing" secondItem="ewl-6G-GxU" secondAttribute="trailing" id="hkl-gW-9Kh"/>
+                                    <constraint firstItem="Tc6-Qx-dYz" firstAttribute="top" secondItem="5Pf-Mv-KgQ" secondAttribute="bottom" constant="-38" id="iMa-td-zjj"/>
                                     <constraint firstItem="Tc6-Qx-dYz" firstAttribute="centerY" secondItem="2K1-8K-wPv" secondAttribute="centerY" id="iuv-f5-wZc"/>
                                     <constraint firstItem="Xaw-vS-WYj" firstAttribute="top" secondItem="Tc6-Qx-dYz" secondAttribute="bottom" constant="30" id="jSY-uD-jPK"/>
                                     <constraint firstItem="Tc6-Qx-dYz" firstAttribute="leading" secondItem="DHA-cl-Qgy" secondAttribute="leading" id="jqo-0a-ofL"/>
