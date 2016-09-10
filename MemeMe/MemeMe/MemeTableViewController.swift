@@ -10,7 +10,7 @@ import UIKit
 
 class MemeTableViewController: UITableViewController {
     
-    var memes: [Meme] = []
+    private var memes: [Meme] = []
     private let reuseIdentifier = "Meme"
     
     override func viewWillAppear(animated: Bool) {
@@ -48,18 +48,16 @@ class MemeTableViewController: UITableViewController {
         return cell
     }
 
-    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+                let _ = appDelegate.memes.removeAtIndex(indexPath.row)
+                memes = appDelegate.memes
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            }
+        }
     }
-    */
-
 
     // MARK: - Navigation
 
