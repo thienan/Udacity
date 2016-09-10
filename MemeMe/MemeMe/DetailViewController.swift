@@ -20,22 +20,14 @@ class DetailViewController: UIViewController {
         
         tabBarController?.tabBar.hidden = true
         navigationItem.rightBarButtonItem = editButtonItem()
-        
-        // Do any additional setup after loading the view.
-        if let index = memeIndexToDisplay {
-            if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                memes = appDelegate.memes
-            }
-            imageView?.image = memes[index].memedImage
-        }
     }
     
     override func viewWillAppear(animated: Bool) {
         if let index = memeIndexToDisplay {
             if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
                 memes = appDelegate.memes
+                imageView?.image = memes[index].memedImage
             }
-            imageView?.image = memes[index].memedImage
         }
     }
     
