@@ -26,6 +26,9 @@ class HomeViewController: UIViewController, Alertable {
     private var activeField: UITextField!
     private var haveAccessToPhotoLibrary: Bool = false
     private var memeText: MemeText?
+    
+    private var memes: [Meme] = []
+    var memeIndexToEdit: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +37,19 @@ class HomeViewController: UIViewController, Alertable {
         configureTextFields(topTextField, text: "TOP")
         configureTextFields(bottomTextField, text: "BOTTOM")
         configureUI(whenStateIs: MemeMeUIState.Start)
+        
+        if let index = memeIndexToEdit {
+            configureUI(whenStateIs: MemeMeUIState.ImageSelected)
+            
+            if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
+                memes = appDelegate.memes
+                
+                let meme = memes[index]
+                imagePickerView.image = meme.image
+                topTextField.text = meme.topText
+                bottomTextField.text = meme.bottomText
+            }
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -129,9 +145,15 @@ class HomeViewController: UIViewController, Alertable {
             /* canhazbits (2014) iOS - Calling App Delegate method from ViewController
              Available at: http://stackoverflow.com/a/26417656 (Accessed: 10 Aug 2016) */
             if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
-                appDelegate.memes.append(meme)
+                
+                if let index = memeIndexToEdit {
+                    appDelegate.memes[index] = meme
+                } else {
+                    appDelegate.memes.append(meme)
+                }
             }
         }
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     @IBAction func trashButtonTapped(sender: AnyObject) {
@@ -156,6 +178,10 @@ class HomeViewController: UIViewController, Alertable {
             topTextField.font = font
             bottomTextField.font = font
         }
+    }
+    
+    @IBAction func cancelButtonTapped(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
