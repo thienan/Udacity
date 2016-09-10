@@ -12,16 +12,6 @@ class MemeTableViewController: UITableViewController {
     
     var memes: [Meme] = []
     private let reuseIdentifier = "Meme"
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.leftBarButtonItem = self.editButtonItem()
-    }
     
     override func viewWillAppear(animated: Bool) {
         if let appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate {
