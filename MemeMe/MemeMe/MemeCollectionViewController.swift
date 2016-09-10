@@ -10,7 +10,7 @@ import UIKit
 
 class MemeCollectionViewController: UICollectionViewController {
     
-    var memes: [Meme] = []
+    private var memes: [Meme] = []
     private let reuseIdentifier = "Meme"
 
     override func viewWillAppear(animated: Bool) {
