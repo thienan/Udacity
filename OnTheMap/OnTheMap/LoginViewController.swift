@@ -24,6 +24,21 @@ class LoginViewController: UIViewController, Alertable, Linkable {
     /// A shared UdacityClient instance.
     private var udacityClient = UdacityClient.shared
     
+    // MARK: View Controller Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Ensure the username and password fields are clear
+        username.text = ""
+        password.text = ""
+        
+        // Set the alpha values of the login fields to zero
+        self.username.alpha = 0
+        self.password.alpha = 0
+        self.signUp.alpha = 0
+        self.login.alpha = 0
+    }
+    
     // MARK: Instance Methods
     
     /**
