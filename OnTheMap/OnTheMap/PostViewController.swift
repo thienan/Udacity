@@ -123,7 +123,9 @@ class PostViewController: UIViewController, Alertable, Linkable {
         }
         
         if let location = locationTextField.text {
-            activityIndicator.startAnimating()
+            DispatchQueue.main.async {
+                self.activityIndicator.startAnimating()
+            }
             
             // Use the location service to geocode the location string provided by the user
             locationService.geocode(location: location) { (location, placemark, error) in

@@ -93,7 +93,10 @@ class LoginViewController: UIViewController, Alertable, Linkable {
         }
         
         if let username = username.text, let password = password.text {
-            activityIndicator.startAnimating()
+            DispatchQueue.main.async {
+                self.activityIndicator.startAnimating()
+            }
+            
             udacityClient.login(withUsername: username, andPassword: password) { (success, errorMessage) in
                 guard (errorMessage == nil) else {
                     DispatchQueue.main.async() {
