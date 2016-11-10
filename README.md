@@ -1,6 +1,8 @@
 ## Overview
 Portfolio apps from my iOS Developer Nanodegree - [Udacity](https://www.udacity.com/).
 
+***
+
 ### Project 1: PitchPerfect
 An app that records a message and plays the audio back through user-selected filters.
 
