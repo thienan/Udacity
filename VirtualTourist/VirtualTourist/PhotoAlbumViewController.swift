@@ -10,6 +10,12 @@ import UIKit
 import MapKit
 import CoreData
 
+/*
+ The overall implementation of this view controller is inspired by the WWDC 2016 session 419
+ ("Protocol and value oriented programming in UIKIT apps") and analysis of the Lucid Dreams
+ sample application.
+ */
+
 class PhotoAlbumViewController: UIViewController, Alertable {
 
     // MARK: - Outlets
