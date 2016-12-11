@@ -11,3 +11,6 @@ Take a photo, and overlay text to meme-ify your friends. Then share on your favo
 
 ### Project 3: OnTheMap
 Build an app to post and display a map of locations of other Nanodegree students.
+
+### Project 4: VirtualTourist
+Build an app to drop pins on a map and display nearby images. Store the locations and images using Core Data.
