@@ -43,10 +43,7 @@ class PhotoAlbumViewController: UIViewController, Alertable {
     var dataController: DataController!
     
     // MARK: - View Lifecycle
-        
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    override func viewDidAppear(_ animated: Bool) {
         mutate { model, _ in
             model.removeAllPhotos()
             model = sharedModel
@@ -98,6 +95,8 @@ class PhotoAlbumViewController: UIViewController, Alertable {
         } else {
             mutate { _, state in state = .loading }
         }
+        
+        super.viewDidAppear(animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
